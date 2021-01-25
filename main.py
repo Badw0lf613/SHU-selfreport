@@ -57,8 +57,8 @@ def report_day(sess, t):
         return False
 
     BaoSRQ = t.strftime('%Y-%m-%d')
-    XiangXDZ = get_random_address()
-
+#     XiangXDZ = get_random_address()
+    XiangXDZ = "御桥路1679弄7号1904室"
     while True:
         try:
             r = sess.post(url, data={
@@ -92,8 +92,8 @@ def report_day(sess, t):
                 "p1$ddlSheng": "上海",
                 "p1$ddlShi$Value": "上海市",
                 "p1$ddlShi": "上海市",
-                "p1$ddlXian$Value": "宝山区",
-                "p1$ddlXian": "宝山区",
+                "p1$ddlXian$Value": "浦东新区",
+                "p1$ddlXian": "浦东新区",
                 "p1$XiangXDZ": XiangXDZ,
                 "p1$FengXDQDL": "否",
                 "p1$TongZWDLH": "否",
@@ -170,14 +170,14 @@ def report_halfday(sess, t, temperature=37):
                 "p1$BaoSRQ": BaoSRQ,
                 "p1$DangQSTZK": "良好",
                 "p1$TiWen": str(temperature),
-                "p1$ZaiXiao": "宝山",
+                "p1$ZaiXiao": "不在校",
                 "p1$ddlSheng$Value": "上海",
                 "p1$ddlSheng": "上海",
                 "p1$ddlShi$Value": "上海市",
                 "p1$ddlShi": "上海市",
-                "p1$ddlXian$Value": "宝山区",
-                "p1$ddlXian": "宝山区",
-                "p1$XiangXDZ": "上海大学",
+                "p1$ddlXian$Value": "浦东新区",
+                "p1$ddlXian": "浦东新区",
+                "p1$XiangXDZ": "御桥路1679弄7号1904室",
                 "p1$FengXDQDL": "否",
                 "p1$TongZWDLH": "否",
                 "p1$CengFWH": "否",
